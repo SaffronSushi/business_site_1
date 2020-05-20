@@ -61,6 +61,12 @@ p, h1, h2, h3, h4 {
   color: var(--medium-color);
 }
 
+/* -- Padding */
+.py-1 { padding: 1rem 0 }
+.py-2 { padding: 2rem 0 }
+.py-3 { padding: 3rem 0 }
+
+/* -- Backgrounds & Buttons*/
 .btn {
   font-size: 1.25rem;
   display: inline-block;
@@ -76,10 +82,15 @@ p, h1, h2, h3, h4 {
   color: var(--secondary-color);
 }
 
-/* -- Padding */
-.py-1 { padding: 1rem 0 }
-.py-2 { padding: 2rem 0 }
-.py-3 { padding: 3rem 0 }
+.bg-primary, .btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary, .btn-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
 
 /* Header */
 #main-header .header-content {
@@ -155,8 +166,6 @@ section#showcase {
 /* Contact Link */
 #contact-link {
   padding: 1rem 0;
-  background: var(--secondary-color);
-  color: #fff;
 }
 
 #contact-link .link-content {
@@ -168,14 +177,14 @@ section#showcase {
 #contact-link .link-content .link-content-img {
   height: 50vh;
   flex-basis: 100%;
-  flex: 1;
+  flex: 400px 1 1;
   background: #333 url('../img/contact_link.jpg') no-repeat center center/cover;
 }
 
 #contact-link .link-content .link-content-text {
   height: 50vh;
   flex-basis: 100%;
-  flex: 1;
+  flex: 400px 1 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -220,16 +229,21 @@ section#showcase {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 0 2rem;
 }
 
 #projects .projects-content .projects-item {
   position: relative;
   height: 300px;
-  width: 300px;
+  flex: 300px 1 1;
+  margin: 0.5rem;
+  box-shadow: 0 0 0.25rem rgba(0,0,0,0.6);
+  z-index: 1;
+  transition: all 0.5s ease;
 }
 
-#projects .projects-item .projects-text {
-  visibility: hidden;
+/* -- Description displayed over bg */
+#projects .projects-item .item-text-wrap {
   position: absolute;
   top: 0;
   right: 0;
@@ -240,17 +254,143 @@ section#showcase {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: rgba(0,0,0,0.6);
   color: #fff;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#projects .projects-item .item-text-wrap::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  background: var(--primary-color);
+  opacity: 0.9;
   z-index: 1;
 }
 
-#projects .projects-item .projects-text:hover {
-  visibility: visible;
+#projects .projects-item .item-text {
+  padding: 0 1rem;
+  opacity: 0;
+  z-index: 2;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
 }
 
-#projects .projects-content #item-1 {
+#projects .projects-item .item-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* -- Reveal description when hovered */
+#projects .projects-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1.25rem rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+#projects .projects-item:hover .item-text-wrap::after {
+  transform: translateX(0);
+}
+
+#projects .projects-item:hover .item-text {
+  opacity: 1;
+}
+
+/* -- Items */
+#projects #item-1 {
   background: #333 url('../img/projects/building_1.jpg') no-repeat center center/cover;
+}
+
+#projects #item-2 {
+  background: #333 url('../img/projects/building_2.jpg') no-repeat center center/cover;
+}
+
+#projects #item-3 {
+  background: #333 url('../img/projects/building_3.jpg') no-repeat center center/cover;
+}
+
+#projects #item-4 {
+  background: #333 url('../img/projects/building_4.jpg') no-repeat center center/cover;
+}
+
+/* CONTACT PAGE */
+
+/* Contact Showcase */
+#contact-showcase .section-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+/* Contact Form */
+#contact .text-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact .text-fields input:focus,
+#contact .text-fields textarea {
+  outline-color: var(--primary-color);
+}
+
+#contact .text-fields input,
+#contact .text-fields textarea {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+}
+
+#contact .text-fields textarea {
+  height: 200px;
+}
+
+/* Contact Info */
+#contact-info .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#contact-info .container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#contact-info .container div i {
+  margin-bottom: 1rem;
+}
+
+/* Testimonials */
+#testimonials .testimonials-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#testimonials .testimonials-content div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#testimonials .testimonials-content div img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* Footer */
