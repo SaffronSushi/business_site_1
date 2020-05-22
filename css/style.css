@@ -68,6 +68,18 @@ p, h1, h2, h3, h4 {
 
 /* -- Backgrounds & Buttons*/
 .btn {
+  text-align: center;
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-outline {
   font-size: 1.25rem;
   display: inline-block;
   padding: 0.25rem 0.5rem;
@@ -77,7 +89,7 @@ p, h1, h2, h3, h4 {
   border-radius: 5px;
 }
 
-.btn:hover {
+.btn-outline:hover {
   background: #fff;
   color: var(--secondary-color);
 }
@@ -87,10 +99,23 @@ p, h1, h2, h3, h4 {
   color: #fff;
 }
 
+.btn-primary:hover {
+  background: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
 .bg-secondary, .btn-secondary {
   background: var(--secondary-color);
   color: #fff;
 }
+
+.btn-secondary:hover {
+  background: #fff;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
 
 /* Header */
 #main-header .header-content {
@@ -98,6 +123,7 @@ p, h1, h2, h3, h4 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -351,20 +377,29 @@ section#showcase {
   height: 200px;
 }
 
+#contact form button {
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+
 /* Contact Info */
 #contact-info .container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 #contact-info .container div {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0 0.5rem;
+  font-weight: 600;
 }
 
 #contact-info .container div i {
@@ -372,25 +407,46 @@ section#showcase {
 }
 
 /* Testimonials */
-#testimonials .testimonials-content {
+#client-section {
+  text-align: center;
+}
+
+#client-section .testimonials {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
 
-#testimonials .testimonials-content div {
+#client-section .testimonials div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-#testimonials .testimonials-content div img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+#client-section .testimonials ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+}
+
+#client-section .testimonials p {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+#client-section .testimonials img {
+  width: 100px;
+  height: 100px;
+  margin: 0 0.5rem;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Footer */

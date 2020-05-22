@@ -1,0 +1,32 @@
+/* Tablets & Smaller */
+@media(max-width: 800px) {
+  /* Header Showcase */
+  section#showcase {
+    height: 30rem;
+  }
+
+  /* Contact Link Button */
+  #contact-link .link-content .btn {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Smartphones */
+@media(max-width: 550px) {
+  /* Header & Navbar */
+  #main-header .header-content {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  #main-header #main-nav ul {
+    flex-direction: column;
+    margin: 0.5rem 0;
+  }
+  
+  #main-header #main-nav ul li {
+    width: inherit;
+    padding: 0.25rem 0;
+    border-bottom: 1px dotted var(--medium-color);
+  }
+}
