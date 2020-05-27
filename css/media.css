@@ -1,22 +1,12 @@
 /* Tablets & Smaller */
 @media(max-width: 800px) {
-  /* Header Showcase */
-  section#showcase {
-    height: 30rem;
-  }
-
-  /* Contact Link Button */
-  #contact-link .link-content .btn {
-    padding: 1rem 1.5rem;
-  }
-}
-
-/* Smartphones */
-@media(max-width: 550px) {
   /* Header & Navbar */
   #main-header .header-content {
     text-align: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    width: 100%;
   }
 
   #main-header #main-nav ul {
@@ -28,5 +18,61 @@
     width: inherit;
     padding: 0.25rem 0;
     border-bottom: 1px dotted var(--medium-color);
+  }
+
+  #main-header #main-nav ul li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Header Showcase */
+  section#showcase {
+    height: 30rem;
+  }
+
+  /* HOME PAGE */
+  
+  /* Contact Link Button */
+  #contact-link .link-content .btn {
+    padding: 1rem 1.5rem;
+  }
+
+  /* CONTACT PAGE */
+
+  /* Contact Info */
+  #contact-info .container {
+    flex-direction: column;
+  }
+
+  #contact-info .container div {
+    margin: 1.5rem 0;
+  }
+
+  /* Testimonials */
+  #client-section .testimonials div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #contact-link .link-content .link-content-img {
+    margin: 0;
+  }
+}
+
+/* Smartphones */
+@media(max-width: 550px) {
+  * { text-align: center !important}
+
+  /* Lower header font size */
+  .section-title { font-size: 2rem }
+
+  /* Header & Navbar */
+  #main-header .branding a {
+    font-size: 2.5rem;
+  }
+
+  #main-header #main-nav ul li a {
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
   }
 }

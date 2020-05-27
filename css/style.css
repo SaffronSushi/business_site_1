@@ -117,7 +117,7 @@ p, h1, h2, h3, h4 {
 }
 
 
-/* Header */
+/* Header & Navbar */
 #main-header .header-content {
   display: flex;
   flex-direction: row;
@@ -131,7 +131,15 @@ p, h1, h2, h3, h4 {
 #main-header .branding a {
   font-size: 1.75rem;
   font-weight: 100;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
   color: var(--medium-color);
+  transition: all 0.25s ease;
+}
+
+#main-header .branding a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 #main-header #main-nav ul {
@@ -140,6 +148,7 @@ p, h1, h2, h3, h4 {
 }
 
 #main-header #main-nav ul li a {
+  display: inline-block;
   padding: 1rem;
   font-weight: 600;
   color: var(--medium-color);
@@ -403,7 +412,7 @@ section#showcase {
 }
 
 #contact-info .container div i {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Testimonials */
@@ -424,21 +433,29 @@ section#showcase {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid #fff;
+}
+
+#client-section .testimonials div:last-child {
+  border: none;
 }
 
 #client-section .testimonials ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  margin-left: 1rem;
   color: #fff;
 }
 
 #client-section .testimonials p {
   padding: 0.5rem;
   margin: 1rem 0;
-  border: 1px solid #fff;
-  border-radius: 5px;
+  /* border: 1px solid #fff;
+  border-radius: 5px; */
 }
 
 #client-section .testimonials img {
