@@ -116,7 +116,6 @@ p, h1, h2, h3, h4 {
   border: 1px solid var(--secondary-color);
 }
 
-
 /* Header & Navbar */
 #main-header .header-content {
   display: flex;
@@ -366,30 +365,59 @@ section#showcase {
 }
 
 /* Contact Form */
-#contact .text-fields {
+#contact #form {
   display: flex;
   flex-direction: column;
 }
 
-#contact .text-fields input:focus,
-#contact .text-fields textarea {
-  outline-color: var(--primary-color);
-}
-
-#contact .text-fields input,
-#contact .text-fields textarea {
+#contact #form .text-field input,
+#contact #form .text-field textarea {
+  width: 100%;
   padding: 0.5rem 1rem;
   margin: 0.25rem 0;
+  border: 1px solid #888;
+  border-radius: 5px;
 }
 
-#contact .text-fields textarea {
+#contact #form .text-field textarea {
   height: 200px;
 }
 
-#contact form button {
+#contact #form button {
   width: 100%;
   padding: 1rem 0;
   margin-top: 0.5rem;
+}
+
+#contact #form .text-field input:focus,
+#contact #form .text-field textarea:focus {
+  position: relative;
+  outline: 0;
+  border-width: 2px;
+}
+
+#contact #form button:focus {
+  outline: none;
+}
+
+/* -- Success/Error Styling */
+#form .text-field.success input,
+#form .text-field.success textarea {
+  border-color: var(--secondary-color);
+}
+
+#form .text-field.error input,
+#form .text-field.success textarea {
+  border-color: var(--primary-color);
+}
+
+#form .text-field small {
+  display: none;
+  color: var(--primary-color);
+}
+
+#form .text-field.error small {
+  display: block;
 }
 
 /* Contact Info */

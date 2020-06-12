@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Andrew Durkee">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  <link rel="stylesheet" href="css/utility.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <script src="https://kit.fontawesome.com/0dc85c6626.js" crossorigin="anonymous"></script>
@@ -39,14 +39,34 @@
   <!-- Section: Contact -->
   <section id="contact">
     <div class="container">
-      <form>
-        <div class="text-fields">
-          <input type="text" placeholder="Name" class="required">
-          <input type="email" placeholder="Email" class="required">
-          <input type="text" placeholder="Phone Number">
-          <input type="text" placeholder="Subject" class="required">
-          <textarea placeholder="Message"></textarea>
+      <form id="form" class="form">
+        <!-- Name -->
+        <div class="text-field">
+          <small>Error message</small>
+          <input id="username" type="text" placeholder="Name">
         </div>
+        <!-- Email -->
+        <div class="text-field">
+          <small>Error message</small>
+          <input id="email" type="email" placeholder="Email">
+        </div>
+        <!-- Phone Number -->
+        <div class="text-field">
+          <small>Error message</small>
+          <input id="phone" type="text" placeholder="Phone Number">
+        </div>
+        <!-- Subject -->
+        <div class="text-field">
+          <small>Error message</small>
+          <input type="text" placeholder="Subject">
+        </div>
+        <!-- Message -->
+        <div class="text-field">
+          <small>Error message</small>
+          <textarea id="message" placeholder="Message"></textarea>
+        </div>
+
+        <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
