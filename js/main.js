@@ -9,16 +9,16 @@ const message = document.querySelector('#message');
 // Show error message
 function showError(input, message)
 {
-  const textField = input.parentElement;
+  let textField = input.parentElement;
   textField.className = 'text-field error';
   const small = textField.querySelector('small');
   small.innerText = message;
 }
 
-// Show success message
+// Show success
 function showSuccess(input)
 {
-  const textField = input.parentElement;
+  let textField = input.parentElement;
   textField.className = 'text-field success';
 }
 
@@ -41,7 +41,7 @@ form.addEventListener('submit', function(e)
 
   if(email.value === '') {
     showError(email, 'Email is required');
-  } else if(!isValidEmail(email)) {
+  } else if(!isValidEmail(email.value)) {
     showError(email, 'Email is not valid');
   } else {
     showSuccess(email);

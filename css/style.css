@@ -406,7 +406,7 @@ section#showcase {
   border-color: var(--secondary-color);
 }
 
-#form .text-field.error input,
+#form .text-field.success input,
 #form .text-field.success textarea {
   border-color: var(--primary-color);
 }
