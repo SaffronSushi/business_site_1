@@ -20,7 +20,7 @@ function showSuccess(input)
 {
   let textField = input.parentElement;
   textField.className = 'text-field success';
-}
+ }
 
 // Check email is valid
 function isValidEmail(email)

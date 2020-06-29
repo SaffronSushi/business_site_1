@@ -339,19 +339,19 @@ section#showcase {
 
 /* -- Items */
 #projects #item-1 {
-  background: #333 url('../img/projects/building_1.jpg') no-repeat center center/cover;
+  background: #333 url('../img/projects/building_1_x1080.jpg') no-repeat center center/cover;
 }
 
 #projects #item-2 {
-  background: #333 url('../img/projects/building_2.jpg') no-repeat center center/cover;
+  background: #333 url('../img/projects/building_2_x1080.jpg') no-repeat center center/cover;
 }
 
 #projects #item-3 {
-  background: #333 url('../img/projects/building_3.jpg') no-repeat center center/cover;
+  background: #333 url('../img/projects/building_3_x1080.jpg') no-repeat center center/cover;
 }
 
 #projects #item-4 {
-  background: #333 url('../img/projects/building_4.jpg') no-repeat center center/cover;
+  background: #333 url('../img/projects/building_4_x1080.jpg') no-repeat center center/cover;
 }
 
 /* CONTACT PAGE */
